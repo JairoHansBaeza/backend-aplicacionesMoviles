@@ -36,18 +36,13 @@ personajeRoutes.post('/',(request: Request, response: Response)=>{
     };
 
     Personaje.create(personaje).then(personajeDataDb =>{
-        console.log(personajeDataDb);
+        return response.json(personajeDataDb);
     }).catch(error => {
         return response.json({
             ok: false,
             msj: 'Ha ocurrido un error, no se ha podido guardar el registro'
         });
     })
-
-    return response.json({
-        ok: true,
-        msj: 'Post personajes funcionando correctamente'
-    });
 });
 
 personajeRoutes.put('/:id', (req:Request, res:Response)=>{

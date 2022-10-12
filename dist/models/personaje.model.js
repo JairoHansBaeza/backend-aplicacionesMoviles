@@ -8,13 +8,16 @@ const personajeSchema = new mongoose_1.Schema({
         require: [true, 'El campo nombre es obligatorio']
     },
     nombreReal: {
-        type: String
+        type: String,
+        require: [true, 'El campo nombre real es obligatorio']
     },
     edad: {
-        type: Number
+        type: Number,
+        require: [true, 'El campo edad es obligatorio']
     },
     imagen: {
-        type: String
+        type: String,
+        require: [true, 'El campo imagen es obligatorio']
     }
 });
 exports.Personaje = (0, mongoose_1.model)('Personaje', personajeSchema);

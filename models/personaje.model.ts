@@ -6,13 +6,16 @@ const personajeSchema = new Schema({
         require: [true,'El campo nombre es obligatorio']
     },
     nombreReal: {
-        type: String
+        type: String,
+        require: [true,'El campo nombre real es obligatorio']
     },
     edad: {
-        type:Number
+        type:Number,
+        require: [true,'El campo edad es obligatorio']
     },
     imagen: {
-        type: String
+        type: String,
+        require: [true,'El campo imagen es obligatorio']
     }
 });
 

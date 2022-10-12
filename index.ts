@@ -15,7 +15,7 @@ server.app.use((req, res, next) => {
 server.app.use(bodyParser.json());
 server.app.use(bodyParser.urlencoded({extended:true}));
 server.app.use('/',rutasDefecto);
-server.app.use('/personaje',personajeRoutes);
+server.app.use('/personajes',personajeRoutes);
 
 mongoose.connect('mongodb://localhost:27017/personajesDb',(error)=>{
     if(error){
