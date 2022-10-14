@@ -61,7 +61,7 @@ personajeRoutes.put('/:id', (req, res) => {
         });
     });
 });
-personajeRoutes.delete('/', (req, res) => {
+personajeRoutes.delete('/:id', (req, res) => {
     const id = req.query.id;
     personaje_model_1.Personaje.findByIdAndDelete(id).then(personajeDb => {
         return res.json({

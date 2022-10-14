@@ -64,7 +64,7 @@ personajeRoutes.put('/:id', (req:Request, res:Response)=>{
     })
 })
 
-personajeRoutes.delete('/', (req:Request, res:Response)=>{
+personajeRoutes.delete('/:id', (req:Request, res:Response)=>{
     const id = req.query.id;
 
     Personaje.findByIdAndDelete(id).then(personajeDb=>{
